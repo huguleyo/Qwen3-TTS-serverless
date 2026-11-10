@@ -31,9 +31,6 @@ COPY requirements.txt /workspace/requirements.txt
 # Make bootstrap executable
 RUN chmod +x /workspace/bootstrap.sh
 
-# Pre-install dependencies to image's python environment
-# These will also be installed to the venv during bootstrap for persistence
-RUN pip install --no-cache-dir -r /workspace/requirements.txt
 
 # Set the bootstrap script as the command
 CMD ["bash", "/workspace/bootstrap.sh"]
