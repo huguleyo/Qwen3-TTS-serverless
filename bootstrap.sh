@@ -44,7 +44,7 @@ if [ ! -f "$FIRST_RUN_FLAG" ]; then
 
     # Install additional dependencies
     echo "Installing additional dependencies..."
-    pip install runpod>=1.6.0 boto3>=1.26.0 librosa soundfile hf_transfer
+    pip install "runpod>=1.6.0" "boto3>=1.26.0" librosa soundfile hf_transfer
 
     # Install ffmpeg and sox for audio processing
     apt-get update && apt-get install -y ffmpeg sox
